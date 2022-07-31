@@ -1,0 +1,42 @@
+<!--NO FORM TAG IS USED FOR UPLOADING FILE MESSAGE JUST PUT THERE DATA IN A VERIABLE AND USE THEM -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk SMS and Email Service</title>
+    <link rel="stylesheet" href="/static/Files/pageStyle.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="drag-area">
+                <h1>MESSAGE SERVICE</h1>
+                <header>Click on the button below</header>
+                <span>To</span>
+                <input type="file" ><!--UPLOAD FILE FORM HERE -->
+            </div>
+        </section>
+        <section>
+            <div style="width: 442px;">
+                <fieldset class="subject"><!--SUBJECT OF MAIL -->
+                    <legend>Subject</legend>
+                    <input type='text' class='textarea' name="subject" >
+                </fieldset>
+                <fieldset class="text"><!--MAIL BODY -->
+                    <legend>Body</legend>
+                    <textarea id='sms' class='textarea' name="sms"></textarea>
+                </fieldset>
+            </div>
+        </section>
+        <section>
+            <button type='submit' id='sendBtn'>Send</button><!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
+        </section>
+    </main>
+    <script src="/static/Files/script.js"></script>
+</body>
+
+</html>
