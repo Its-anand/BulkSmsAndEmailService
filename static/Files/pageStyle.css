@@ -41,34 +41,7 @@ section img
   width: 30rem;
   height: auto;
 }
-#upload_send_button
-{
-  margin-top: 1rem;
-  width: 442px;
-  
-  display: flex;
-  justify-content: space-between;
-}
-#upload
-{
-  border: 1px solid #2cd45e;
-  border-radius: 5px;
-  width: 19rem;
-  -webkit-box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);
-  -moz-box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);
-  box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);;
-}
-#upload::-webkit-file-upload-button, #sendBtn{
-  padding: 10px 25px;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  background: #2cd45e;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
  #upload::-webkit-textfield-decoration-container {
   color:rgb(255, 255, 255);
   opacity: 1;
@@ -87,19 +60,7 @@ section img
   font-size: 1.2rem;
   cursor: pointer;
 }
-.text, .subject
-{
-  background: transparent;
-  outline: none;
-  width: 442px;
-  height: 350px;
-  border: 2px solid #2cd45e;
-  padding: 0px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);
-  -moz-box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);
-  box-shadow: 0px 0px 18px -3px rgba(20,204,84,1);}
+
 legend
 {
   color: #fff;

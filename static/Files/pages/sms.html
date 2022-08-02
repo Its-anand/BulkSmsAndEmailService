@@ -9,29 +9,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulk SMS and Email Service</title>
     <link rel="stylesheet" href="/static/Files/pageStyle.css">
+    <style>
+        main {
+            background: linear-gradient(to right, #89b5e1, #93c1ef);
+        }
+
+        #upload {
+            border: 1px solid #2cd45e;
+            border-radius: 5px;
+            width: 19rem;
+            -webkit-box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+            -moz-box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+            box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+        }
+
+        #upload::-webkit-file-upload-button,
+        #sendBtn {
+            padding: 10px 25px;
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+            background: #3880EE;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .text,
+        .subject {
+            background: transparent;
+            outline: none;
+            width: 420px;
+            height: 350px;
+            border: 2px solid #3880EE;
+            padding: 0px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+            -moz-box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+            box-shadow: 0px 0px 18px -3px rgba(56, 128, 238, 1);
+        }
+        #upload_send_button
+{
+  margin-top: 1rem;
+  width: 420px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+    </style>
 </head>
 
 <body>
     <main>
         <section>
-            <div class="drag-area">
+            <img src="../image/message_image_for_website.png" alt="">
+        </section>
+        <section>
+            <form action="" method="post">
                 <h1>MESSAGE SERVICE</h1>
-                <header>Click on the button below</header>
-                <span>To</span>
-                <input type="file" ><!--UPLOAD FILE FORM HERE -->
-            </div>
+                <fieldset class="text">
+                    <!--MESSAGE BODY -->
+                    <legend>Message</legend>
+                    <textarea id='sms' class='textarea' name="sms"></textarea>
+                </fieldset>
+                <div id="upload_send_button">
+                    <input type="file" id="upload">
+                    <button type='submit' id='sendBtn'>Send</button>
+                    <!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
+                </div>
+            </form>
         </section>
-        <section>
-            <fieldset class="text">
-                <legend>Message</legend>
-                <textarea  id='sms' class='textarea' name="sms"></textarea><!--MESSAGE BODY -->
-            </fieldset>           
-        </section>
-        <section>
-            <button type='submit' id='sendBtn'>Send</button><!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
-        </section>
+
     </main>
-    <script src="/static/Files/script.js"></script>
 </body>
 
 </html>
