@@ -9,27 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulk SMS and Email Service</title>
     <link rel="stylesheet" href="/static/Files/pageStyle.css">
+    <style>
+        main
+        {
+            background: linear-gradient(to right, #035245, #05816d);
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <section>
-            <div class="drag-area">
+            <img src="../image/whatsapp_image_for_website.png" alt="">
+        </section>
+        <section>
+            <form action="" method="post">
                 <h1>WHATSAPP SERVICE</h1>
-                <header>Click on the button below</header>
-                <span>To</span>
-                <input type="file" >
-            </div>
+                <fieldset class="text">
+                    <!--MESSAGE BODY -->
+                    <legend>Message</legend>
+                    <textarea id='sms' class='textarea' name="sms"></textarea>
+                </fieldset>
+                <div id="upload_send_button">
+                    <input type="file" id="upload">
+                    <button type='submit' id='sendBtn'>Send</button>
+                    <!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
+                </div>
+            </form>
         </section>
-        <section>
-            <fieldset class="text"><!--MESSAGE BODY -->
-                <legend>Message</legend>
-                <textarea  id='sms' class='textarea' name="sms"></textarea>
-            </fieldset>        
-        </section>
-        <section>
-            <button type='submit' id='sendBtn'>Send</button><!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
-        </section>
+
     </main>
     <script src="/static/Files/script.js"></script>
 </body>
