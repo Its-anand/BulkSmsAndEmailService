@@ -20,4 +20,8 @@ from BulkSmsAndEmailService import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homePage),
+    path('email',views.sendemail,name="email"),
+    path('whatsapp',views.sendwhatsapp,name="whatsapp"),
+    path('sms',views.sms,name="sms"),
+
 ]

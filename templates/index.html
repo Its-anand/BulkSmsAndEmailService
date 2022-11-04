@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulk SMS and Email Service</title>
     <link rel="stylesheet" href="/static/Files/style.css">
+    <link type="text/css" href="@@path/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,19 +23,19 @@
                 <br>
                 <div id="sending_option"> <!--SEND TO TREE PAGES WHATSAPP EMAIL SMS-->
                     <div id="child1" class="sending_option_childs">
-                        <a href='/static/Files/pages/sms.html' class="options">
+                        <a href="/sms" class="options">
                             <img src='/static/Files/image/sms.png' alt='SMS'>
                         </a>
                     </div>
 
                     <div id="child2" class="sending_option_childs">
-                        <a href='/static/Files/pages/whatsapp.html' class="options">
+                        <a href="/whatsapp" class="options">
                             <img src='/static/Files/image/whatsapp.png' alt='WHATSAPP'>
                         </a>
                     </div>
 
                     <div id="child3" class="sending_option_childs">
-                        <a href='/static/Files/pages/email.html' class="options">
+                        <a href="/email" class="options">
                             <img src='/static/Files/image/email.png' alt='Email'>
                         </a>
                     </div>
@@ -45,6 +46,38 @@
             <img src="/static/Files/image/bulk_sms_email_image.png" alt="Bulk Sms Email Image">
         </section>
     </main>
+    <!-- sweetalert js  alert message-->
+    {% for message in messages %}
+    {% if message.tags == 'success' %}
+      
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script>
+        var m = "{{ message }}";
+        Swal.fire({
+          icon: 'success',
+          text: m,
+          width: '20%',
+          position: 'top-right',
+          allowEscapeKey: false,
+        });
+      </script>
+    {% else %}
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      var m = "{{ message }}";
+      Swal.fire({
+        icon: 'error',
+        text: m,
+        width: '20%',
+        heightAuto: false,
+        position: 'top-right',
+        allowEscapeKey: false,
+        
+      });
+    </script>
+    {% endif %}
+  {% endfor %}
 </body>
 
 </html>

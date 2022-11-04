@@ -64,10 +64,11 @@
 <body>
     <main>
         <section>
-            <img src="../image/message_image_for_website.png" alt="">
+            <img src="/static/Files/image/message_image_for_website.png" alt="">
         </section>
         <section>
-            <form action="" method="post">
+            <form style="width: 442px;" method="post" action="/email">
+                {% csrf_token %}
                 <h1>MESSAGE SERVICE</h1>
                 <fieldset class="text">
                     <!--MESSAGE BODY -->
@@ -75,7 +76,7 @@
                     <textarea id='sms' class='textarea' name="sms"></textarea>
                 </fieldset>
                 <div id="upload_send_button">
-                    <input type="file" id="upload">
+                    <input type="file" id="upload"name="s-file">
                     <button type='submit' id='sendBtn'>Send</button>
                     <!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
                 </div>

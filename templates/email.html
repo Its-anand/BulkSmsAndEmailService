@@ -1,4 +1,3 @@
-<!--NO FORM TAG IS USED FOR UPLOADING FILE MESSAGE JUST PUT THERE DATA IN A VERIABLE AND USE THEM -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,12 +79,15 @@ box-shadow: 0px 0px 18px -3px rgba(65,133,183,1);
 <body>
     <main>
         <section>
-            <img src="../image/email_image_for_website.png" alt="">
+            <img src="/static/Files/image/email_image_for_website.png" alt="">
         </section>
         <section>
-
-            <form style="width: 442px;">
-
+            
+            <form style="width: 442px;" method="post" action="/email" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+                
+                
                 <h1>MESSAGE SERVICE</h1>
 
                 <fieldset class="subject">
@@ -99,7 +101,7 @@ box-shadow: 0px 0px 18px -3px rgba(65,133,183,1);
                     <textarea id='sms' class='textarea' name="sms"></textarea>
                 </fieldset>
                 <div id="upload_send_button">
-                    <input type="file" id="upload">
+                    <input type="file" id="upload"name="e-file">
                     <button type='submit' id='sendBtn'>Send</button>
                     <!-- BUTTON TO TRIGGER EMAIL SERVICE ON THE BACKEND WHICH WILL START SEND MAIL -->
                 </div>
@@ -107,6 +109,7 @@ box-shadow: 0px 0px 18px -3px rgba(65,133,183,1);
         </section>
 
     </main>
+    
     <script src="/static/Files/script.js"></script>
 </body>
 
